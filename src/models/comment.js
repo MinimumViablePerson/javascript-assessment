@@ -13,6 +13,13 @@ class Comment {
         image.comments.push(this);
         return image;
     }
+
+    // create comment element from current comment object
+    commentEl() {
+        return `<li id="comment-${this.id}">
+            ${this.comment}
+        </li>`;
+    }
 }
 
 Comment.all = [];
