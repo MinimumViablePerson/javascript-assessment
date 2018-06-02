@@ -17,9 +17,12 @@ class CommentsController {
       form.addEventListener('submit', event => {
         event.preventDefault();
         const imageId = parseInt(event.target.dataset.id);
-        const commentText = event.target.querySelector('.user-text').value;
+        const commentInput = event.target.querySelector('.user-text');
+        const commentText = commentInput.value;
         const commentObject = new Comment(commentText, imageId);
         this.render(commentObject);
+        // empty the input field after submitting comment
+        commentInput.value = '';
       });
     }
   }
