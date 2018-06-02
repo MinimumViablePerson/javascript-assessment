@@ -21,4 +21,11 @@ class CommentsController {
       });
     }
   }
+
+  render(commentObject) {
+    const targetImage = commentObject.image;
+    const commentElement = commentObject.commentEl();
+    const commentSection = document.querySelector(`#comments-${targetImage.id}`);
+    commentSection.innerHTML += commentElement;
+  }
 }
