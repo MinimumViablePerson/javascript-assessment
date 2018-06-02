@@ -3,8 +3,10 @@ class CommentsController {
     this.$addCommentForm = $('.add-comment')
   }
 
+  // initialise comment controller
+  // by adding event listener to all form elements
   init() {
-    // kick off controller from here
+    this.addCommentFormListener()
   }
 
   // add a listener to all form elements
@@ -22,6 +24,7 @@ class CommentsController {
     }
   }
 
+  // append the comment element to the target image
   render(commentObject) {
     const targetImage = commentObject.image;
     const commentElement = commentObject.commentEl();
