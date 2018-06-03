@@ -16,9 +16,9 @@ class Comment {
 
   // create comment element from current comment object
   commentEl() {
-  return `<li id="comment-${this.id}">
+    return `<li id="comment-${this.id}">
       ${this.comment}
-  </li>`;
+    </li>`;
   }
 }
 
